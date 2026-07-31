@@ -41,20 +41,18 @@ Go Fraud Detection Service ↔ Redis
 
 4. Run each service in a separate terminal
 
-   "go run ./cmd/transaction-service"
-   "go run ./cmd/fraud-detection-service"
+   "go run ./cmd/transaction-service"  
+   "go run ./cmd/fraud-detection-service"  
    "go run ./cmd/alert-service"
 
 5. Open a fourth terminal and send a transaction with curl (alternatively you can do this with Postman)
 
-   "curl -X POST http://localhost:3000/api/v1/transactions \
-    -H "Content-Type: application/json" \
-    -d '{"user_id":"dominic","amount":15000,"currency":"USD","location":"USA"}'"
+   "curl -X POST http://localhost:3000/api/v1/transactions \ -H "Content-Type: application/json" \ -d '{"user_id":"dominic","amount":15000,"currency":"USD","location":"USA"}'"
 
    To trigger each rule specifically:
 
-   Large amount: any amount over 10000
-   Rapid transactions: same user_id, 5+ requests within 30 seconds
+   Large amount: any amount over 10000  
+   Rapid transactions: same user_id, 5+ requests within 30 seconds  
    Location change: same user_id, second request with a different location than the first
 
 ---
