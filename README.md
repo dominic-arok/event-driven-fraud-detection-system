@@ -30,21 +30,21 @@ Go Fraud Detection Service ↔ Redis
 
 1. Open Docker Desktop app
 
-2a. Build and run container from terminal with "docker compose up -d"
+2. Build and run container from terminal with "docker compose up -d"
 
-2b. _For First Time Only_ Open http://localhost:8080 (Kafka UI) and create two topics:
+3. _For First Time Only:_ Open http://localhost:8080 (Kafka UI) and create two topics:
 
-    Topic Partitions Replication Factor Retention
-    transactions 10 1 7 days
-    fraud-alerts 5 1 7 days
+   Topic Partitions Replication Factor Retention
+   transactions 10 1 7 days
+   fraud-alerts 5 1 7 days
 
-3. Run each service in a separate terminal
+4. Run each service in a separate terminal
 
    "go run ./cmd/transaction-service"
    "go run ./cmd/fraud-detection-service"
    "go run ./cmd/alert-service"
 
-4. Open a fourth terminal and send a transaction with curl (alternatively you can do this with Postman)
+5. Open a fourth terminal and send a transaction with curl (alternatively you can do this with Postman)
 
    "curl -X POST http://localhost:3000/api/v1/transactions \
     -H "Content-Type: application/json" \
