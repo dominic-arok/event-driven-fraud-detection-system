@@ -34,7 +34,8 @@ Go Fraud Detection Service ↔ Redis
 
 3. _For First Time Only:_ Open http://localhost:8080 (Kafka UI) and create two topics:
 
-   Topic - Partitions - Replication Factor - Retention  
+   Topic - Partitions - Replication Factor - Retention
+
    transactions - 10 - 1 - 7 days  
    fraud-alerts - 5 - 1 - 7 days
 
