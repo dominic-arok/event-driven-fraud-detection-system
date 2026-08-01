@@ -57,7 +57,7 @@ Go Fraud Detection Service ↔ Redis
 
 ---
 
-# How To Shutdwon
+# How To Shutdown
 
 1.  Close Go services with Ctrl+C in each Go service terminal
 
